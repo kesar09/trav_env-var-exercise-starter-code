@@ -15,7 +15,7 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t trav_env-var-exercise-starter-code .
+  - docker build -t trav_env-var-exercise-starter-code --build-arg NAME=${NAME} .
   - docker tag trav_env-var-exercise-starter-code kesar09/trav_env-var-exercise-starter-code:latest
 
 after_success:
